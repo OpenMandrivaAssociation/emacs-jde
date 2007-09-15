@@ -7,7 +7,7 @@
 
 Name:           emacs-%{fname}
 Version:        2.3.5.1
-Release:        %mkrel 4
+Release:        %mkrel 5
 Epoch:          0
 Summary:        The Java Development Environment for Emacs (JDEE)
 Requires:       emacs >= 0:20.7
@@ -19,8 +19,6 @@ Group:          Development/Java
 Obsoletes:      jde
 Provides:       jde = %{epoch}:%{version}-%{release}
 %if %{gcj_support}
-Requires(post): java-gcj-compat
-Requires(postun): java-gcj-compat
 BuildRequires:  java-gcj-compat-devel
 %else
 BuildArch:      noarch
