@@ -7,7 +7,7 @@
 
 Name:           emacs-%{fname}
 Version:        2.3.5.1
-Release:        %mkrel 5
+Release:        %mkrel 6
 Epoch:          0
 Summary:        The Java Development Environment for Emacs (JDEE)
 Requires:       emacs >= 0:20.7
@@ -35,7 +35,7 @@ BuildRequires:  emacs-bin
 BuildRequires:  emacs-cedet
 BuildRequires:  emacs-elib
 BuildRequires:  java-devel
-BuildRequires:  jpackage-utils
+BuildRequires:  java-rpmbuild
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
