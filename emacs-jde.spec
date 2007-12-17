@@ -36,7 +36,6 @@ BuildRequires:  emacs-cedet
 BuildRequires:  emacs-elib
 BuildRequires:  java-devel
 BuildRequires:  java-rpmbuild
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
 The Java Development Environment for Emacs (JDEE) is an Emacs Lisp
