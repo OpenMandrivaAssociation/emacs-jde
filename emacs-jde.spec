@@ -59,7 +59,7 @@ find . -type f -name ".nosearch" | xargs %{__rm} -f
         CEDET=%{cedetdir})
 
 %{__rm} -rf java/src/jde/debugger
-(cd java/src && %{javac} -d ../classes `find . -type f -name \*.java`)
+(cd java/src && %{javac} -source 1.4 -target 1.4 -d ../classes `find . -type f -name \*.java`)
 (cd java/classes && %{jar} cf ../lib/jde.jar `find . -type f -name \*.class`)
 %{__rm} -rf java/classes
 
@@ -98,9 +98,7 @@ pushd %{buildroot}%{jdedir}/java/lib
 %{__ln_s} %{_javadir}/junit.jar junit.jar
 popd
 
-%if %{gcj_support}
-%{_bindir}/aot-compile-rpm
-%endif
+%{gcj_compile}
 
 %{__perl} -pi -e 's|\r$||g' doc/tli_rbl/txt/jdebug-ug-toc.txt
 
@@ -121,9 +119,4 @@ popd
 %doc ChangeLog ReleaseNotes.txt
 %{jdedir}
 %{_javadir}/*.jar
-%if %{gcj_support}
-%dir %{_libdir}/gcj/%{name}
-%attr(-,root,root) %{_libdir}/gcj/%{name}/*
-%endif
-
-
+%{gcj_files}
