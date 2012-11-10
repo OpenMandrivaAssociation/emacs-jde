@@ -1,0 +1,12 @@
+--- jde-2.3.5.1/java/src/jde/util/AntServer.java~	2006-02-19 15:22:47.000000000 +0100
++++ jde-2.3.5.1/java/src/jde/util/AntServer.java	2006-06-06 03:44:39.000000000 +0200
+@@ -70,9 +70,6 @@
+     }
+     public static void start(String command) {
+         SecurityManager sm = System.getSecurityManager();
+-        if (sm == null) {
+-            System.setSecurityManager(new JDESecurityManager());
+-        }
+         
+         //Parsing commands
+         StringTokenizer st = new StringTokenizer(command);
