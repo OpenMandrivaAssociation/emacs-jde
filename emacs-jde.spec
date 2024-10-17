@@ -12,7 +12,7 @@ Epoch:          0
 Summary:        The Java Development Environment for Emacs (JDEE)
 Requires:       emacs >= 0:20.7
 License:        GPL
-URL:            http://jdee.sunsite.dk/
+URL:            https://jdee.sunsite.dk/
 Source0:        http://jdee.sunsite.dk/jde-latest.tar.bz2
 Patch0:         %{name}-build.patch
 Group:          Development/Java
